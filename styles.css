@@ -1,0 +1,110 @@
+/* Fuente y Reset */
+body {
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Encabezado */
+.encabezado {
+    width: 100%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+.encabezado img {
+    max-width: 15%;
+    height: auto;
+}
+
+/* Contenedor principal */
+.container {
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+/* Línea vertical del termómetro */
+.timeline {
+    position: relative;
+    padding-left: 40px;
+    border-left: 10px solid #4CAF50;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #4CAF50, #ccc);
+}
+
+/* Cada hito */
+.hito {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Puntos de crecimiento del termómetro */
+.hito::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    width: 25px;
+    height: 25px;
+    background: linear-gradient(to right, #4CAF50, #2a5298);
+    border-radius: 50%;
+    transform: translateY(-50%);
+    border: 4px solid white;
+}
+
+/* Botón de registro */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #ff9800, #ff5722);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #ff5722, #e64a19);
+}
+
+/* Estilo para imágenes */
+.hito img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Firma */
+.firma {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.firma .nombre {
+    font-weight: 900;
+}
+
+.firma .guion {
+    font-weight: 400;
+}
+
+.firma .texto {
+    font-weight: 700;
+}
